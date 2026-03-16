@@ -22,22 +22,22 @@ export default function Hero() {
           <div className="text-left space-y-8">
             <div className="inline-block">
               <span className="px-4 py-2 bg-teal-500/20 backdrop-blur-sm text-teal-300 text-sm font-medium rounded-full border border-teal-400/30">
-                Sistema ERP Inteligente
+                Sistema de Gestión para Comercios
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Gestión Financiera
+              Vendé más,
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
-                Inteligente
+                perdé menos,
               </span>
               <br />
-              para Tu Comercio
+              gestioná mejor.
             </h1>
 
             <p className="text-xl text-gray-300 leading-relaxed max-w-xl">
-              Optimiza procesos, controla inventarios y toma decisiones basadas en análisis en tiempo real con el sistema ERP más completo del mercado.
+              Punto de venta, caja, stock, clientes y reportes en un solo sistema. Pensado para rotiserías, carnicerías, almacenes y todo tipo de comercio.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -58,8 +58,8 @@ export default function Hero() {
 
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">+5,000</div>
-                <div className="text-sm text-gray-400 mt-1">Comercios</div>
+                <div className="text-3xl font-bold text-white">9</div>
+                <div className="text-sm text-gray-400 mt-1">Módulos integrados</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">99.9%</div>

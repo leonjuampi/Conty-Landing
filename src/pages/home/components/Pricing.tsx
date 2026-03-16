@@ -11,11 +11,12 @@ export default function Pricing() {
       monthlyPrice: { USD: 10, ARS: 10000 },
       annualPrice: { USD: 8, ARS: 8000 },
       features: [
-        'Hasta 100 productos',
-        'Facturación básica',
+        'Hasta 100 productos con variantes',
+        'Punto de venta completo',
+        'Gestión de caja (1 sesión)',
+        'Control de stock básico',
         'Reportes mensuales',
-        'Control de inventario',
-        '1 usuario',
+        '1 usuario · 1 sucursal',
         'Soporte por email',
         'Actualizaciones gratuitas'
       ],
@@ -27,14 +28,16 @@ export default function Pricing() {
       monthlyPrice: { USD: 25, ARS: 25000 },
       annualPrice: { USD: 20, ARS: 20000 },
       features: [
-        'Productos ilimitados',
-        'Facturación avanzada',
+        'Productos y categorías ilimitados',
+        'Punto de venta con múltiples métodos de pago',
+        'Gestión de caja avanzada con rendición',
+        'Stock con transferencias y ajustes',
+        'Clientes y cuenta corriente',
+        'Presupuestos y cotizaciones',
         'Reportes en tiempo real',
         'Multi-sucursal (hasta 5)',
-        'Hasta 10 usuarios',
-        'Soporte prioritario 24/7',
-        'Integraciones premium',
-        'Backup automático'
+        'Hasta 10 usuarios con roles',
+        'Soporte prioritario 24/7'
       ],
       highlighted: true,
       badge: 'Más Popular'
@@ -46,16 +49,16 @@ export default function Pricing() {
       annualPrice: null,
       customPrice: true,
       features: [
-        'Todo en Profesional',
+        'Todo lo del plan Profesional',
         'Sucursales ilimitadas',
         'Usuarios ilimitados',
+        'Listas de precios múltiples',
+        'Costos de elaboración y recetas',
+        'Gestión de materias primas',
         'Soporte dedicado',
         'Implementación personalizada',
         'Capacitación en sitio',
-        'SLA garantizado',
-        'Servidor dedicado',
-        'Personalización completa',
-        'Consultoría estratégica'
+        'SLA garantizado'
       ],
       highlighted: false
     }

@@ -106,7 +106,7 @@ export default function Footer() {
         <div className="border-t border-teal-500/30 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-teal-100">
-              © 2025 Conty. Todos los derechos reservados. | <a href="https://readdy.ai/?origin=logo" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Powered by Readdy</a>
+              © 2026 Conty. Todos los derechos reservados.
             </div>
             <div className="flex items-center space-x-6">
               <a href="#" className="text-teal-100 hover:text-white transition-colors" aria-label="LinkedIn">
