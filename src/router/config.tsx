@@ -9,6 +9,7 @@ import Gastronomia from "../pages/negocio/gastronomia/page";
 import Planes from "../pages/planes/page";
 import Funcionalidades from "../pages/funcionalidades/page";
 import Terminos from "../pages/terminos/page";
+import Carta from "../pages/carta/page";
 import Privacidad from "../pages/privacidad/page";
 
 const routes: RouteObject[] = [
@@ -51,6 +52,10 @@ const routes: RouteObject[] = [
   {
     path: "/soporte/videos",
     element: <Videos />,
+  },
+  {
+    path: "/prueba",
+    element: <Carta />,
   },
   {
     path: "*",
