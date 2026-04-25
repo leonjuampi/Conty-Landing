@@ -11,9 +11,15 @@ export default function AFIPPreview() {
 
           {/* Left — text */}
           <div ref={leftRef} className="fade-up">
-            <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-orange-600 text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wide">
-              <i className="ri-flashlight-line"></i>
-              Módulo de Facturación
+            <div className="flex flex-wrap items-center gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-orange-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">
+                <i className="ri-flashlight-line"></i>
+                Módulo de Facturación
+              </div>
+              <div className="inline-flex items-center gap-1.5 bg-orange-100 border border-orange-200 text-orange-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
+                <i className="ri-time-line"></i>
+                Próximamente
+              </div>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 leading-tight">

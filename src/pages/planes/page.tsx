@@ -87,8 +87,8 @@ const comparisonRows = [
   { label: 'Pedidos por WhatsApp', basic: true, pro: true, full: true },
   { label: 'Dominio propio', basic: false, pro: false, full: true },
   { category: 'Facturación', isCategory: true },
-  { label: 'Facturación AFIP/ARCA', basic: false, pro: true, full: true },
-  { label: 'Facturas A, B y C', basic: false, pro: true, full: true },
+  { label: 'Facturación AFIP/ARCA (Próximamente)', basic: false, pro: 'Próximamente', full: 'Próximamente' },
+  { label: 'Facturas A, B y C (Próximamente)', basic: false, pro: 'Próximamente', full: 'Próximamente' },
   { category: 'Reportes', isCategory: true },
   { label: 'Dashboard de métricas', basic: true, pro: true, full: true },
   { label: 'Reportes en tiempo real', basic: false, pro: true, full: true },
@@ -144,7 +144,7 @@ export default function Planes() {
           <br />
           <span className="text-green-700">se adapte a tu negocio</span>
         </h1>
-        <p className="text-gray-500">Sistema completo: POS + Inventario + Tienda Online + Facturación AFIP</p>
+        <p className="text-gray-500">Sistema completo: POS + Inventario + Tienda Online + Facturación AFIP <span className="text-orange-600 font-medium">(próximamente)</span></p>
 
         {/* Free trial banner */}
         <div className="mt-6 inline-flex items-center gap-3 bg-green-700 text-white rounded-xl px-5 py-3">

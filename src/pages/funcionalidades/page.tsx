@@ -194,7 +194,7 @@ const mainFeatures = [
       'Exportación para contador en formato AFIP',
     ],
     side: 'left',
-    badge: 'Plan Pro',
+    badge: 'Próximamente',
   },
 ];
 
@@ -208,6 +208,7 @@ const extras = [
 const badgeColors: Record<string, string> = {
   'Plan Pro': 'bg-green-100 text-green-700',
   'Plan Empresarial': 'bg-purple-100 text-purple-700',
+  'Próximamente': 'bg-orange-100 text-orange-700',
 };
 
 export default function Funcionalidades() {
