@@ -11,6 +11,7 @@ import Funcionalidades from "../pages/funcionalidades/page";
 import Terminos from "../pages/terminos/page";
 import Carta from "../pages/carta/page";
 import Privacidad from "../pages/privacidad/page";
+import Test2 from "../pages/test2/page";
 
 const routes: RouteObject[] = [
   {
@@ -56,6 +57,10 @@ const routes: RouteObject[] = [
   {
     path: "/prueba",
     element: <Carta />,
+  },
+  {
+    path: "/test2",
+    element: <Test2 />,
   },
   {
     path: "*",

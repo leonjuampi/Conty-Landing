@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap");
+
+.t2-root {
+  --t2-rose: #f7c8d4;
+  --t2-rose-soft: #fde4ec;
+  --t2-rose-deep: #d98aa3;
+  --t2-aqua: #7fd3c4;
+  --t2-aqua-soft: #d8f1ec;
+  --t2-aqua-deep: #3f8a7d;
+  --t2-cream: #fff8f5;
+  --t2-ink: #4a2f3c;
+
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(circle at 15% 20%, var(--t2-rose-soft) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, var(--t2-aqua-soft) 0%, transparent 50%),
+    linear-gradient(180deg, #fffaf7 0%, #f3f9f7 100%);
+  color: var(--t2-ink);
+  font-family: "Quicksand", system-ui, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.t2-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.t2-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(217, 138, 163, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px -12px rgba(74, 47, 60, 0.18);
+}
+
+.t2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  border: none;
+  background: linear-gradient(135deg, var(--t2-rose-deep) 0%, var(--t2-aqua-deep) 100%);
+  color: white;
+  box-shadow: 0 6px 18px -4px rgba(74, 47, 60, 0.35);
+}
+.t2-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(74, 47, 60, 0.4);
+}
+.t2-btn:active {
+  transform: translateY(0);
+}
+.t2-btn-ghost {
+  background: transparent;
+  color: var(--t2-aqua-deep);
+  box-shadow: none;
+  border: 1.5px solid var(--t2-aqua-deep);
+}
+.t2-btn-ghost:hover {
+  background: var(--t2-aqua-soft);
+}
+
+@keyframes t2-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.t2-fade-up {
+  animation: t2-fade-up 0.7s ease both;
+}
+
+@keyframes t2-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.t2-pop {
+  animation: t2-pop 0.5s ease both;
+}
+
+@keyframes t2-pulse-soft {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+.t2-pulse {
+  animation: t2-pulse-soft 2.4s ease-in-out infinite;
+}
+
+/* ---------- Memotest ---------- */
+.t2-memo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.t2-memo-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.t2-memo-inner {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.t2-memo-card.flipped .t2-memo-inner,
+.t2-memo-card.matched .t2-memo-inner {
+  transform: rotateY(180deg);
+}
+.t2-memo-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 6px 14px -6px rgba(74, 47, 60, 0.25);
+}
+.t2-memo-back {
+  background: linear-gradient(135deg, var(--t2-rose-deep), var(--t2-aqua-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+.t2-memo-front {
+  transform: rotateY(180deg);
+  background: white;
+}
+.t2-memo-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.t2-memo-card.matched .t2-memo-front {
+  outline: 3px solid var(--t2-aqua-deep);
+  outline-offset: -3px;
+}
+
+/* ---------- Rhythm ---------- */
+.t2-rhythm-stage {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 60vh;
+  min-height: 420px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 248, 245, 0.7));
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(217, 138, 163, 0.2);
+  box-shadow: inset 0 0 30px rgba(217, 138, 163, 0.12);
+  user-select: none;
+  touch-action: manipulation;
+}
+.t2-rhythm-heart {
+  position: absolute;
+  top: -40px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 6px rgba(217, 138, 163, 0.5));
+  transition: transform 0.15s ease;
+}
+.t2-rhythm-heart:active {
+  transform: scale(0.85);
+}
+.t2-rhythm-heart.popped {
+  animation: t2-pop-out 0.35s ease both;
+  pointer-events: none;
+}
+@keyframes t2-pop-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.t2-rhythm-heart.missed {
+  opacity: 0.35;
+  filter: grayscale(0.6);
+}
+@keyframes t2-rhythm-fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+.t2-rhythm-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, rgba(217, 138, 163, 0.18));
+  pointer-events: none;
+}
+
+/* ---------- Puzzle ---------- */
+.t2-puzzle-board {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 6px;
+  border-radius: 14px;
+}
+.t2-puzzle-piece {
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 6px -2px rgba(74, 47, 60, 0.25);
+}
+.t2-puzzle-piece.empty {
+  background: rgba(217, 138, 163, 0.1);
+  cursor: default;
+  box-shadow: none;
+}
+.t2-puzzle-piece.selected {
+  outline: 3px solid var(--t2-aqua-deep);
+  outline-offset: -3px;
+  transform: scale(0.96);
+}
+.t2-puzzle-piece.movable:not(.empty):hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Heart confetti ---------- */
+.t2-confetti {
+  position: fixed;
+  pointer-events: none;
+  inset: 0;
+  overflow: hidden;
+  z-index: 50;
+}
+.t2-confetti-heart {
+  position: absolute;
+  top: -40px;
+  font-size: 1.6rem;
+  animation: t2-fall linear forwards;
+}
+@keyframes t2-fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ---------- Floating petals (background) ---------- */
+.t2-petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.t2-petal {
+  position: absolute;
+  top: -20px;
+  font-size: 1rem;
+  opacity: 0.5;
+  animation: t2-petal-fall linear infinite;
+}
+@keyframes t2-petal-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
